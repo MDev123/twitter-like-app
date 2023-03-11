@@ -1,31 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Twitter-like Platform</title>
-	<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-	<header>
-		<h1>Twitter-like Platform</h1>
-		<button class="new-post-button">New Post</button>
-	</header>
-	<main>
-		<div class="tweet-box">
-			<div class="tweet-box-header">
-				<img src="https://via.placeholder.com/48x48" alt="User Avatar">
-				<div class="tweet-box-header-info">
-					<div class="tweet-box-header-info-username">Username</div>
-					<div class="tweet-box-header-info-fullname">Full Name</div>
-				</div>
-			</div>
-			<div class="tweet-box-content">
-				<textarea rows="4" placeholder="What's happening?"></textarea>
-			</div>
-			<div class="tweet-box-footer">
-				<button class="tweet-box-footer-button tweet-box-footer-button-disabled">Tweet</button>
-			</div>
-		</div>
-		<!-- Display tweets here -->
-	</main>
-</body>
+  <head>
+    <title>Twitter-like Platform</title>
+    <style>
+      /* Style for the "New Post" button */
+      .new-post-button {
+        background-color: red;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      /* Style for the user avatar */
+      .user-avatar {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+
+      /* Style for the tweet box */
+      .tweet-box {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      /* Style for the tweet button */
+      .tweet-button {
+        background-color: red;
+        color: white;
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+
+      /* Style for the tweet button when disabled */
+      .tweet-button[disabled] {
+        background-color: #ccc;
+        cursor: default;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Twitter-like Platform</h1>
+      <button class="new-post-button">New Post</button>
+    </div>
+    <div>
+      <img src="user-avatar.png" alt="User Avatar" class="user-avatar">
+      <h3>Username</h3>
+      <p>Full Name</p>
+    </div>
+    <div class="tweet-box">
+      <textarea placeholder="What's happening?"></textarea>
+      <button class="tweet-button" disabled>Tweet</button>
+    </div>
+  </body>
 </html>
